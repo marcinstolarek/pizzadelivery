@@ -1,0 +1,13 @@
+pl/shop/pizzadelivery/client/discounts/Discount.class
+pl/shop/pizzadelivery/product/pizza/PizzaSize.class
+pl/shop/pizzadelivery/PizzaDeliveryApplication.class
+pl/shop/pizzadelivery/client/discounts/DiscountTwoPizzas.class
+pl/shop/pizzadelivery/product/files/PizzaPriceFileHandler.class
+pl/shop/pizzadelivery/product/files/FileHandler.class
+pl/shop/pizzadelivery/configuration/CartController.class
+pl/shop/pizzadelivery/product/pizza/PriceSize$1.class
+pl/shop/pizzadelivery/product/pizza/Pizza.class
+pl/shop/pizzadelivery/product/pizza/PriceSize.class
+pl/shop/pizzadelivery/product/pizza/PizzaComponent.class
+pl/shop/pizzadelivery/product/Product.class
+pl/shop/pizzadelivery/client/VisitorCart.class
