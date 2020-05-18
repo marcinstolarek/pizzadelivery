@@ -1,7 +1,7 @@
 package pl.shop.pizzadelivery.product.pizza;
 
 import pl.shop.pizzadelivery.product.Product;
-import pl.shop.pizzadelivery.product.files.PizzaPriceFileHandler;
+import pl.shop.pizzadelivery.files.PizzaPriceFileHandler;
 
 import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
@@ -17,6 +17,9 @@ public final class Pizza extends Product {
     private PizzaSize size;
     public static int maxNumOfComponents;
 
+    /**
+     * Create SMALL pizza with one component - dough as a base
+     */
     public Pizza() {
         super();
         size = PizzaSize.SMALL;
@@ -25,6 +28,10 @@ public final class Pizza extends Product {
         recountPrice();
     }
 
+    /**
+     * Create pizza with one component - dough as a base
+     * @param size - specified size
+     */
     public Pizza(@NotNull PizzaSize size) {
         super();
         this.size = size;
@@ -48,10 +55,19 @@ public final class Pizza extends Product {
         recountPrice();
     }
 
-    private PriceSize getPriceOfElement(String name) {
+    /**
+     * Get components price depends on its name
+     * @param name - name of component
+     * @return full prices for each size
+     */
+    private PriceSize getPriceOfComponent(String name) {
         return PizzaPriceFileHandler.readPriceSize(name);
     }
 
+    /**
+     * Change size of pizza and recount its price
+     * @param newSize - new specified size of pizza. @NotNull used.
+     */
     private void resize(@NotNull PizzaSize newSize) {
         if (newSize.equals(size))
             return;
@@ -59,6 +75,9 @@ public final class Pizza extends Product {
         recountPrice();
     }
 
+    /**
+     * Recount price after any change. Count each element at ComponentList
+     */
     private void recountPrice() {
         int newPrice = 0;
         for (PizzaComponent comp : componentList) {
@@ -67,8 +86,12 @@ public final class Pizza extends Product {
         price = newPrice;
     }
 
+    /**
+     * Add new compoment to pizza
+     * @param componentName - name of component
+     */
     public void addComponent(String componentName) {
-        PizzaComponent newComponent = new PizzaComponent(componentName, getPriceOfElement(componentName));
+        PizzaComponent newComponent = new PizzaComponent(componentName, getPriceOfComponent(componentName));
         if (newComponent.getPrice() != null) { // add only recognized components
             componentList.add(newComponent);
             recountPrice();
@@ -81,7 +104,7 @@ public final class Pizza extends Product {
      * @return true if removed, false if component wasn't found
      */
     public boolean removeComponent(String componentName) {
-        boolean isRemoved = componentList.remove(new PizzaComponent(componentName, getPriceOfElement(componentName)));
+        boolean isRemoved = componentList.remove(new PizzaComponent(componentName, getPriceOfComponent(componentName)));
         if (isRemoved)
             recountPrice();
         return isRemoved;

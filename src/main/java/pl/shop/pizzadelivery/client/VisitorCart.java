@@ -1,5 +1,6 @@
 package pl.shop.pizzadelivery.client;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import pl.shop.pizzadelivery.client.discounts.Discount;
 import pl.shop.pizzadelivery.product.Product;
 
@@ -12,7 +13,7 @@ import java.util.Objects;
  * Cart with product and discounts. Have total price and count the best discount.
  */
 public class VisitorCart {
-    public static List<Discount> discountList = new ArrayList<>(); // TODO - for admin: make a thread that read cyclically file with written discount; admin can change file
+    @Autowired public static List<Discount> discountList;
     private List<Product> productList; // no setter
     private int totalFullPrice;
     private int totalDiscountedPrice;

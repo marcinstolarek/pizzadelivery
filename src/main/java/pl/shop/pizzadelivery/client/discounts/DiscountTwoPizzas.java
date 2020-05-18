@@ -8,14 +8,15 @@ import java.util.List;
 /**
  * Second cheaper pizza has lower price. If more than two pizza, lower price only for the cheapest.
  */
-public class DiscountTwoPizzas extends Discount {
-    private float discountPercentageSecondPizza; // range 0.0 - 100.0
+public class DiscountTwoPizzas extends DiscountData implements Discount {
+    private int discountPercentageSecondPizza; // range 0 - 100
 
     /**
-     * Discount for second pizza
-     * @param discountPercentageSecondPizza - range 0.0 - 100.0
+     * Discount for second pizza. Set short name as "TwoPizzas" and full name as "Discount " + discountPercentageSecondPizza + "% for second pizza"
+     * @param discountPercentageSecondPizza - range 0 - 100
      */
-    public DiscountTwoPizzas(float discountPercentageSecondPizza) {
+    public DiscountTwoPizzas(int discountPercentageSecondPizza) {
+        super("TwoPizzas", "Discount " + discountPercentageSecondPizza + "% for second pizza");
         this.discountPercentageSecondPizza = discountPercentageSecondPizza;
     }
 
@@ -46,11 +47,6 @@ public class DiscountTwoPizzas extends Discount {
                 indexOfCheapest = i;
             }
         }
-        return (priceOfCheapest * (int) this.discountPercentageSecondPizza) / 100;
-    }
-
-    @Override
-    public boolean isActive() {
-        return activity;
+        return (priceOfCheapest * this.discountPercentageSecondPizza) / 100;
     }
 }
