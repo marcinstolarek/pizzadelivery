@@ -1,10 +1,11 @@
 pl/shop/pizzadelivery/client/discounts/Discount.class
 pl/shop/pizzadelivery/product/pizza/PizzaSize.class
+pl/shop/pizzadelivery/files/FileHandler.class
 pl/shop/pizzadelivery/PizzaDeliveryApplication.class
+pl/shop/pizzadelivery/files/PizzaPriceFileHandler.class
 pl/shop/pizzadelivery/configuration/DiscountChecker.class
 pl/shop/pizzadelivery/client/discounts/DiscountTwoPizzas.class
-pl/shop/pizzadelivery/product/files/PizzaPriceFileHandler.class
-pl/shop/pizzadelivery/product/files/FileHandler.class
+pl/shop/pizzadelivery/files/DiscountFileHandler.class
 pl/shop/pizzadelivery/configuration/CartController.class
 pl/shop/pizzadelivery/product/pizza/PriceSize$1.class
 pl/shop/pizzadelivery/product/pizza/Pizza.class

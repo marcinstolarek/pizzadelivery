@@ -33,7 +33,7 @@ public class CartController {
     }
 
     @PostMapping("/cart/pizza")
-    public Pizza newPizza(@RequestParam("size") PizzaSize size/*, @RequestBody Pizza newPizza*/) {
+    public Pizza newPizza(@RequestParam("size") PizzaSize size) {
         System.out.println("Post mapping 2");
         Pizza newPizza = new Pizza(size);
         cart.addProduct(newPizza);

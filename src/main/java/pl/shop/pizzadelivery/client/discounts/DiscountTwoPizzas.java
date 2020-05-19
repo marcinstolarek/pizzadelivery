@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * Second cheaper pizza has lower price. If more than two pizza, lower price only for the cheapest.
  */
-public class DiscountTwoPizzas extends DiscountData implements Discount {
+public class DiscountTwoPizzas extends Discount {
     private int discountPercentageSecondPizza; // range 0 - 100
 
     /**
@@ -16,8 +16,10 @@ public class DiscountTwoPizzas extends DiscountData implements Discount {
      * @param discountPercentageSecondPizza - range 0 - 100
      */
     public DiscountTwoPizzas(int discountPercentageSecondPizza) {
-        super("TwoPizzas", "Discount " + discountPercentageSecondPizza + "% for second pizza");
+        this.shortName = "TwoPizzas";
+        this.fullName = "Discount " + discountPercentageSecondPizza + "% for second pizza";
         this.discountPercentageSecondPizza = discountPercentageSecondPizza;
+        active = false;
     }
 
     @Override
@@ -48,5 +50,10 @@ public class DiscountTwoPizzas extends DiscountData implements Discount {
             }
         }
         return (priceOfCheapest * this.discountPercentageSecondPizza) / 100;
+    }
+
+    @Override
+    public void changeDiscountParameter(int parameter) {
+        discountPercentageSecondPizza = parameter;
     }
 }

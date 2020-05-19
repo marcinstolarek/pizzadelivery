@@ -1,2 +1,3 @@
-pl/shop/pizzadelivery/product/files/PizzaPriceFileHandlerTest.class
+pl/shop/pizzadelivery/files/PizzaPriceFileHandlerTest.class
+pl/shop/pizzadelivery/files/DiscountFileHandlerTest.class
 pl/shop/pizzadelivery/PizzaDeliveryApplicationTests.class

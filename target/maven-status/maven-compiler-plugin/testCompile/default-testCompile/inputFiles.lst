@@ -1,2 +1,3 @@
+/home/marcin/Java/Projekty/pizzadelivery/src/test/java/pl/shop/pizzadelivery/files/PizzaPriceFileHandlerTest.java
 /home/marcin/Java/Projekty/pizzadelivery/src/test/java/pl/shop/pizzadelivery/PizzaDeliveryApplicationTests.java
-/home/marcin/Java/Projekty/pizzadelivery/src/test/java/pl/shop/pizzadelivery/product/files/PizzaPriceFileHandlerTest.java
+/home/marcin/Java/Projekty/pizzadelivery/src/test/java/pl/shop/pizzadelivery/files/DiscountFileHandlerTest.java

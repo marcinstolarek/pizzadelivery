@@ -25,13 +25,12 @@ class PizzaPriceFileHandlerTest {
     private File file = null;
     private String testFileName = "test_writer";
 
-    /**File file
+    /**
      * Create file to test.
      * It has comment at first line and two components ("comp1" and "comp2") in next two lines
      */
-
     @BeforeAll
-    void createFile() {
+    void setUp() {
         String firstLine = "#comment\n";
         String secondLine = "comp1: 10, 20, 30\n";
         String thirdLine = "comp2: 2, 4, 5";
@@ -85,7 +84,7 @@ class PizzaPriceFileHandlerTest {
      * Close and delete test file
      */
     @AfterAll
-    void closeAndDeleteFile() {
+    void tearDown() {
         try { // close file
             writer.close();
         } catch (IOException e) {

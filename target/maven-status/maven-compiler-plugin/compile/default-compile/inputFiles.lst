@@ -1,13 +1,14 @@
 /home/marcin/Java/Projekty/pizzadelivery/src/main/java/pl/shop/pizzadelivery/PizzaDeliveryApplication.java
 /home/marcin/Java/Projekty/pizzadelivery/src/main/java/pl/shop/pizzadelivery/client/discounts/DiscountTwoPizzas.java
 /home/marcin/Java/Projekty/pizzadelivery/src/main/java/pl/shop/pizzadelivery/configuration/CartController.java
-/home/marcin/Java/Projekty/pizzadelivery/src/main/java/pl/shop/pizzadelivery/product/files/FileHandler.java
-/home/marcin/Java/Projekty/pizzadelivery/src/main/java/pl/shop/pizzadelivery/product/files/PizzaPriceFileHandler.java
+/home/marcin/Java/Projekty/pizzadelivery/src/main/java/pl/shop/pizzadelivery/files/FileHandler.java
 /home/marcin/Java/Projekty/pizzadelivery/src/main/java/pl/shop/pizzadelivery/client/VisitorCart.java
 /home/marcin/Java/Projekty/pizzadelivery/src/main/java/pl/shop/pizzadelivery/configuration/DiscountChecker.java
 /home/marcin/Java/Projekty/pizzadelivery/src/main/java/pl/shop/pizzadelivery/client/discounts/Discount.java
 /home/marcin/Java/Projekty/pizzadelivery/src/main/java/pl/shop/pizzadelivery/product/pizza/Pizza.java
 /home/marcin/Java/Projekty/pizzadelivery/src/main/java/pl/shop/pizzadelivery/product/Product.java
 /home/marcin/Java/Projekty/pizzadelivery/src/main/java/pl/shop/pizzadelivery/product/pizza/PriceSize.java
+/home/marcin/Java/Projekty/pizzadelivery/src/main/java/pl/shop/pizzadelivery/files/DiscountFileHandler.java
 /home/marcin/Java/Projekty/pizzadelivery/src/main/java/pl/shop/pizzadelivery/product/pizza/PizzaSize.java
 /home/marcin/Java/Projekty/pizzadelivery/src/main/java/pl/shop/pizzadelivery/product/pizza/PizzaComponent.java
+/home/marcin/Java/Projekty/pizzadelivery/src/main/java/pl/shop/pizzadelivery/files/PizzaPriceFileHandler.java
